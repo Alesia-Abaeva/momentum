@@ -4,8 +4,8 @@
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
-const airHumiditys = document.querySelector('.weather-air');
-const windS = document.querySelector('.weather-wind');
+const airHumiditys = document.querySelector('.humidity');
+const windS = document.querySelector('.wind');
 const city = document.querySelector('.city')
 
 
