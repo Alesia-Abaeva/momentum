@@ -5,7 +5,6 @@ const quotesQ = document.querySelector('.quote');
 
 
 async function getQuotes() {  
-    console.log('quotes')
     const quotes = 'javaScript/json/dataEn.json';
     const res = await fetch(quotes);
     const data = await res.json(); 
