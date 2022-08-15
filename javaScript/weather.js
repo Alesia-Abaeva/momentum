@@ -17,9 +17,34 @@ if(localStorage.getItem('city')) {
 
 city.addEventListener('change', getWeather)
 
-async function getWeather (){
+async function getWeather (language = 'english'){
+    
+  let langWeather 
+
+    switch(language){
+      case 'english' : 
+        langWeather = 'en';
+        break;
+      case 'russian' :
+        langWeather = 'ru';
+        break;
+    }
+
+    const weatherTranslations = {
+      en: {
+        speed: 'Speed',
+        humidity: 'Humidity',
+        speedCount: 'm/s'
+      },
+      ru: {
+        speed: 'Скорость',
+        humidity: 'Влажность',
+        speedCount: 'м/с'
+      }
+    }
+
     try{    
-        const  url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=4c102c5162c2e589741c6254f364ed59&units=metric`
+        const  url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${langWeather}&appid=4c102c5162c2e589741c6254f364ed59&units=metric`
         const response = await fetch(url)
         const data = await response.json()
     
@@ -32,8 +57,8 @@ async function getWeather (){
         weatherIcon.classList.add(`owf-${id}`)
         temperature.textContent = `${temp}°C`
         weatherDescription.textContent = description
-        airHumiditys.textContent = `Humidity: ${humidity}%`
-        windS.textContent = `Speed: ${speed} m/s`
+        airHumiditys.textContent = `${weatherTranslations[langWeather].humidity}: ${humidity}%`
+        windS.textContent = `${weatherTranslations[langWeather].speed}: ${speed} ${weatherTranslations[langWeather].speedCount}`
         // console.log(url)
 
     } catch (err){

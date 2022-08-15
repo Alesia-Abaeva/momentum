@@ -4,8 +4,8 @@ const quotesAuthor = document.querySelector('.author');
 const quotesQ = document.querySelector('.quote');
 
 
-async function getQuotes() {  
-    const quotes = 'javaScript/json/dataEn.json';
+async function getQuotes(language = 'english') {  
+    const quotes = `javaScript/json/data-${language}.json`;
     const res = await fetch(quotes);
     const data = await res.json(); 
     let rundomNumQuotes = getRandomNum(0, 14)   
@@ -14,7 +14,9 @@ async function getQuotes() {
     quotesAuthor.textContent = author;
     quotesQ.textContent = text
   }
-getQuotes();
+  const prevLanguage = JSON.parse(localStorage.getItem('language'))
+
+getQuotes(prevLanguage);
 
 // 1. вывести на экран блок с цитатами
 // получить переменные джейсона
