@@ -19,13 +19,6 @@ let flickCash
 const getUnsplashUrl = (apiKey, tag) => `https://api.unsplash.com/photos/random?orientation=landscape&query=${tag}&client_id=${apiKey}`
 const getFlickrUrl = (apiKey, tag) => `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tag}&extras=url_l&format=json&nojsoncallback=1`
 
-// async function getLinkToImage() {
-//     const url = 'https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=7quauay68Y6bMOjfKele6JuJLCmkBytDFFZlL-MudxY';
-//     const response = await fetch(url);
-//     const data = await response.json();
-
-//     return data
-//     }
 
 const getUnsplashImage = async (tag = timeOfDay) => {
     const data = await apiCall(getUnsplashUrl(unsplashApiKey, tag))

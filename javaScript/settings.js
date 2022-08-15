@@ -20,7 +20,6 @@ const containerNodeMap = {
 // массив ключей параметров в локал сторедж для их начальной установки
 Object.values(containers).forEach((key) => {
     const hidden = JSON.parse(localStorage.getItem(key))
-    console.log(hidden, typeof hidden)
     if (hidden) {
         const selector = containerNodeMap[key];
 
@@ -74,16 +73,7 @@ function hideOptions(containerName){
 }
 
 // hide-options
-
-
 function setLocalStorage(value, key) {
     localStorage.setItem(key,  JSON.stringify(value));
-  }
-
-
-//   if(JSON.parse(localStorage.getItem('todoContainerActive')) == true ){
-//     todoContainer.classList.add('active-todo');
-
-// }
-
+}
 

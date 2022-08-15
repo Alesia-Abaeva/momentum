@@ -16,7 +16,6 @@ if(JSON.parse(localStorage.getItem('todoContainerActive')) == true ){
 
 }
 
-// = JSON.parse(localStorage.getItem('todoContainerActive'))
 
 // если у нас локальном хранилище ничего нет, то TasksArr будет равен пустому массиву
 
@@ -75,9 +74,6 @@ const createTemplate = (task, index) =>{
     `
 }
 
-          // <svg class="icon more-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-                    //     <path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path>
-          // </svg>
 
 const fillHtmlLists = () =>{
     //для начала нужно зачищать задачи!
@@ -117,7 +113,6 @@ const completeTask = (indexElement) => {
 deskTaskInput.addEventListener('keydown', function(event) {
     if (event.code == 'Enter') {
         tasksArr.push(new Task(deskTaskInput.value))
-        console.log(tasksArr)
         updateLocal() 
         fillHtmlLists()
         deskTaskInput.value = '' //очищаем строку инпута
@@ -171,17 +166,9 @@ const saveTask = (event, index) => {
 }
 
 
-
-// window.addEventListener('click', e => {
-//     const target = e.target
-//     console.log(target)
-//     })
-
-
 // open todo
 
 const todoClick = document.querySelector('.todo-icon')
-// let todoContainerActive
 
 
 todoClick.addEventListener('click', function(){
@@ -190,7 +177,7 @@ todoClick.addEventListener('click', function(){
     console.log(todoContainer.classList.contains('active-todo'))
     if(!todoContainer.classList.contains('active-todo')){
         
-        // todoContainerActive = false
+
         setLocalStorageTodo(false)
     } else setLocalStorageTodo(true)
     

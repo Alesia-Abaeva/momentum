@@ -1,7 +1,4 @@
 const name = document.querySelector('.name')
-// name.value = ''
-
-// localStorage
 
 function setLocalStorageName() {
     localStorage.setItem('name', name.value);

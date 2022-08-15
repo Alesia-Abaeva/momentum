@@ -50,26 +50,11 @@ const getRandomNum = (min, max) => Math.floor(Math.random()*(max - min + 1)+min)
 
 function setBg(){
     randomNum = (getRandomNum(1,20)).toString().padStart(2,0)
-    // timeOfDay = showGreeting()
-    // showImg(timeOfDay, randomNum)
     showImg({ timeD: timeOfDay, numberBg: randomNum })
-    // return randomNum
 }// присваивает верное время дня изображению и геренирует число в диапазоне от 1-20 - вызывет с ним функцию генерирующая изображение
 
 setBg()
 
-
-
-
-// function showImg(timeD, numberBg){
-//     const img = new Image();
-//     img.src = buildImageSource(timeD, numberBg)
-
-//     img.addEventListener('load', () => {
-//         document.body.style.backgroundImage = `url('${img.src}')`
-//     })
-  
-// }//генерим ссылку на изображение и что-то делаем с загрузкой
 
 
 async function showImg({ timeD, numberBg, variant = sliderVariants.default }){
@@ -131,10 +116,7 @@ function changeSlide(direction){
 
     randomNum = randomNum.toString().padStart(2,0)  
     console.log(timeOfDay)
-    // showImg(timeOfDay, randomNum)
     showImg({ timeD: currentBackgroundTags, numberBg: randomNum, variant: currentBackgroundVariant })
-
-    // document.body.style.backgroundImage =  ('url("' + (buildImageSource(timeOfDay, randomNum)) + '")')
 
 }
 

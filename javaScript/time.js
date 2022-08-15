@@ -13,15 +13,6 @@ const greeting = {
     night: [0,1,2,3,4,5]
 };
 
-// При переводе, нужно будет так же изменить ссылку на изображение
-
-// const greeting = {
-//     'Goog morning': [6,7,8,9,10,11],
-//     'Goog afternoon': [12,13,14,15,16,17],
-//     'Goog evening': [18,19,20,21,22,23],
-//     'Goog night': [0,1,2,3,4,5]
-// };
-
 const greetingRu = {
     morning: 'Доброе утро',
     afternoon: 'Добрый день',
@@ -61,16 +52,10 @@ function showDate(language = 'english'){
 }
 
 
-// const greetingTranslation = {
-//     en:v
-//     ru:
-// }
-
-
 function showGreeting(language = 'english'){
     const hours = dateNow.getHours()
     let greetingText
-    console.log(language)
+
       
     for(let key in greeting){
         if((greeting[key].includes(hours))){
@@ -92,7 +77,6 @@ function showGreeting(language = 'english'){
 
 setInterval(call,  1000);
 
-// console.log( timeOfDay, 'timeOfDay')
 
 
 

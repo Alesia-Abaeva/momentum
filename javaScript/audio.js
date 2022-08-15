@@ -29,7 +29,6 @@ const player = document.querySelector('.player'),
       nextBtn = document.querySelector('.play-next'),
       audio = document.querySelector('.audio'),
       playIcon = document.querySelector('.play'),
-    //   title = document.querySelectorAll('.title'),
       songTitle = document.querySelector('.song-title'),
       progressContainer = document.querySelector('.progress__container'),
       progressSong= document.querySelector('.progress'),
@@ -173,7 +172,6 @@ const volIcon = document.querySelector('.soundOn'),
 
 function handleVolume() {
     volIcon.classList.toggle('soundOff')
-    // volBox.classList.toggle('active')
 }
 
 function toggleMute(){

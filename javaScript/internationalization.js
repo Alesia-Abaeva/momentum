@@ -11,11 +11,7 @@ let currentLanguage = JSON.parse(localStorage.getItem('language')) ?
 const translation = {
     // ключи - id dom nodes, значение - их содержимое
     [languages.english]: {
-        // morning: 'Goog morning',
-        // day: 'Goog afternoon',
-        // evening: 'Goog evening',
-        // night: 'Goog night',
-        
+      
         ['header-set']: 'General',
         ['descr-set']: 'Customize your dashboard',
         ['show-settings-header']: 'SHOW',
@@ -34,16 +30,8 @@ const translation = {
         ['def-set']: 'Default',
 
         ['todo-header-set']: 'Todo'
-
-        
-        // ['wind']: 'Ветер',
-
     },
     [languages.russian]:{
-        // morning: 'Доброе утро',
-        // day: 'Добрый день',
-        // evening: 'Добрый вечер',
-        // night: 'Доброй ночи',
         ['header-set']: 'Настройки',
         ['descr-set']: 'Настрой свою панель',
         ['show-settings-header']: 'ВИД',
@@ -60,12 +48,7 @@ const translation = {
         ['background-settings-header']: 'ФОН',
         ['def-set']: 'По-умолчанию',
 
-        // ['wind']: 'Ветер',
-
         ['todo-header-set']: 'Задачи'
-        
-
-
      }
 }
 

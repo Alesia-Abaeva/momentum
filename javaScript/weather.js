@@ -53,13 +53,11 @@ async function getWeather (language = 'english'){
         const {temp, humidity} = main
         const {speed} = wind
     
-        // console.log(description)
         weatherIcon.classList.add(`owf-${id}`)
         temperature.textContent = `${temp}°C`
         weatherDescription.textContent = description
         airHumiditys.textContent = `${weatherTranslations[langWeather].humidity}: ${humidity}%`
         windS.textContent = `${weatherTranslations[langWeather].speed}: ${speed} ${weatherTranslations[langWeather].speedCount}`
-        // console.log(url)
 
     } catch (err){
         console.error('errrrrrrrrrrrrr')
