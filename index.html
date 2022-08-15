@@ -35,7 +35,6 @@
         <button class="soundOn player-icon toggle-mute" onclick="toggleMute()"></button>
         <div class="volume-box">
           <input type="range" class="volume-range" step="1" value="80" min="0" max="100" >
-          <!-- oninput="audio.volume = this.value/100"     -->
         </div>
         
 
@@ -52,7 +51,7 @@
         <li class="play-item"  onclick="changePlayList(3)">Nina Kraviz - Skyscrapers</li>
       </ul>
     </div>
-    <!-- id="song-3" -->
+
 
     <div class="weather">
       <input type="text" class="city" />
@@ -61,8 +60,6 @@
       <div class="description-container">
         <span class="temperature"></span>
         <span class="weather-description"></span>
-        <!-- <span class="weather-wind"></span>
-        <span class="weather-air"></span> -->
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>
@@ -141,9 +138,6 @@
           <div class="form-check form-switch">
               <label class="form-check-label" id="quotes" for="quote-checkbox">Quotes</label>
               <input class="form-check-input" type="checkbox" id="quote-checkbox" onclick="hideOptions(containers.quote)" checked>
-              <!-- <input type="text"> -->
-              <!-- <input class="form-check-input" type="checkbox" id="quote-checkbox" onclick="hideOptions(containers.quote)" checked> -->
-
           </div>
           <hr>
 
@@ -154,26 +148,12 @@
           
           </div>
             <hr class="last-hr">
-            <!-- <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
-              <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
-            </div> -->
-
 
       </div> 
 
       <div class="settings-chapter">
           <h4 id="languages-settings-header">LANGUAGE</h4>
           <hr>
-          <!-- <div class="btn-group">
-              <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-              <label class="btn btn-secondary" for="option1">English</label>
-            
-              <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-              <label class="btn btn-secondary" for="option2">Russian</label>
-            
-            </div> -->
-
             <div class="form-check form-switch">
               <label class="form-check-label" id="en-set" for="english-language-checkbox">English</label>
               <input class="form-check-input" type="checkbox" id="english-language-checkbox" onclick="changeLanguage(languages.english)" checked>
@@ -183,7 +163,7 @@
             <div class="form-check form-switch">
               <label class="form-check-label" id="ru-set" for="russian-language-checkbox">Russian</label>
               <input class="form-check-input" type="checkbox" id="russian-language-checkbox" onclick="changeLanguage(languages.russian)">
-              <!-- <input type="text"> -->
+            
            
           
           </div>
@@ -193,15 +173,6 @@
             <div class="settings-chapter">
           <h4 id="background-settings-header">BACKGROUND</h4>
           <hr>
-          <!-- <div class="btn-group">
-              <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-              <label class="btn btn-secondary" for="option1">English</label>
-            
-              <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-              <label class="btn btn-secondary" for="option2">Russian</label>
-            
-            </div> -->
-
             <div class="form-check form-switch">
               <label class="form-check-label" id="def-set" for="default-background-checkbox">Default</label>
               <input class="form-check-input" type="checkbox" id="default-background-checkbox" onclick="changeBackgroundVariant(sliderVariants.default)" checked>
@@ -236,7 +207,6 @@
 
     <div class="settings">
       <button class="button-setting setting-icon"></button>
-      <!-- <span class="">Todo</span> -->
     </div>
 
     <div class="quote-container">
@@ -249,11 +219,10 @@
 
     <div class="todo-list">
       <h3 class="todo-icon" id="todo-header-set">Todo</h3>
-      <!-- <span class="todo-icon" id="todo-set">Todo</span> -->
     </div>
 
   </footer>
-  <!-- <script src="js/script.js"></script> -->
+
   <script src="javaScript/apiService.js"></script>
   <script src="javaScript/time.js"></script>
   <script src="javaScript/backgrondImage.js"></script>

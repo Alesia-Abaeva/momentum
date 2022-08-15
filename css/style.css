@@ -98,9 +98,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* width: 160px;
-   */
-  /* margin-bottom: 28px; */
 }
 
 .play-list {
@@ -186,9 +183,6 @@ body {
   background-image: url("../assets/svg/play-next.svg");
 }
 
-/* .soundOn{
-  background-image: url("../assets/svg/fas_fa-volume-off.svg");
-} */
 .soundOn{
   background-image: url("../assets/svg/volume-svgrepo-com.svg");
 }
@@ -196,11 +190,6 @@ body {
   background-image: url("../assets/svg/volume-svgrepo-com\ \(1\).svg")!important;
 }
 
-/*  */
-/* .volume-box {
-  display: block;
-  visibility: visible;
-} */
 
 
 .progress__container{
@@ -208,28 +197,19 @@ body {
   border-radius: 5px;
   width: 100%;
   height: 5px;
-  /* margin-top: ; */
   display: flex;
   align-items: center;
   cursor: pointer;
- 
-
 
 }
-/* .player{
-  width: 60%;
-} */
 
 .progress{
   background: #9e36ff8c;
   border-radius: 5px;
   height: 3px;
-  /* width: 150px; */
 }
 
 .play-container{
-  /* display: flex; */
-  /* align-content: flex-start; */
   align-items: flex-start;;
   margin-bottom: 28px
 }
@@ -237,7 +217,6 @@ body {
 .play-title-container{
   width: 100%;
   margin-bottom: 10px;
-  /* margin-left: 15px; */
 }
 .time-description{
   font-size: 12px;
@@ -424,18 +403,9 @@ body {
 
 /* todo */
 
-/* display: flex;
-flex-flow: column;
-justify-content: center;
-align-items: center;
-/* width: 50%; */
-/* position: absolute;
-transform: translate(939px, 136px); */ 
-
 .header-todo{
   text-align: left;
   padding: 5px
-  /* background-color: ; */
 }
 
 .flex-wrapper{
@@ -452,10 +422,6 @@ transform: translate(939px, 136px); */
   height: auto;
   width: 320px;
   overflow-y: hidden;
-  /* width: 100%; */
-    /* position: absolute; */
-  /* transform: translate(939px, 136px); */
-  /* left: 0; */
 }
 
 .active-todo{
@@ -464,7 +430,6 @@ transform: translate(939px, 136px); */
 }
 
 .add-todo-wrapper{
-  /* display: flex; */
   width: 300px;
   min-height: 30px;
   align-items: center;
@@ -473,10 +438,8 @@ transform: translate(939px, 136px); */
   padding: 5px;
   margin-bottom: 5px
 }
-/* можно не использовать, так как все равно кнопки не будет */
 
 .input-wrapper{
-  /* display: flex; */
   width: 100%;
   border: 0;
   padding: 0;
@@ -515,7 +478,6 @@ transform: translate(939px, 136px); */
 }
 
 .todo-item.checked{
-  /* opacity: 0.6; */
   color: rgba(255, 255, 255, 0.377);
   text-decoration: line-through;
   opacity: color 0.9;
@@ -523,11 +485,9 @@ transform: translate(939px, 136px); */
 
 .todo-item.delition{
   animation: opacity 1s ease-in-out;
-  /* color: rgba(255, 255, 255, 0.377); */
 }
 
 .todo-item.edition{
-  /* animation: 1s ease-in-out; */
   color: rgba(255, 255, 255, 0.377);
 }
 
@@ -537,9 +497,6 @@ transform: translate(939px, 136px); */
   color: inherit;
   text-decoration:inherit;
   outline: none;
-  
-  
-   /* text-decoration: line-through; */
 }
 
 .description{
@@ -547,27 +504,12 @@ transform: translate(939px, 136px); */
   text-decoration: inherit;
 }
 
-/* .description.checked{
-  color: rgba(255, 255, 255, 0.566);
-  text-decoration: line-through;
-*/
-
 
 .buttons{
   width: 10%;
   padding-top: 5px;
-  /* background-color: black  ; */
-  /* margin-right: 10px;
-  margin-left: 15px; */
-  /* display: flex;
-  align-items: center;
-  justify-content: flex-end; */
 }
 
-/* .buttonR{
-  width: 50%;
-  
-} */
 
 
 .icon-wrapper{
@@ -612,48 +554,6 @@ transform: translate(939px, 136px); */
   padding: 0;
 }
 
-/* modal menu */
-/* 
-когда окно активно
-style="display: block; top: 0px; right: 40px; bottom: auto; opacity: 1; height: auto;" 
-/* первое заменяетмя вторыс */
-/* display: none;
-top: 0px;
-right: 40px;
-bottom: auto;
-opacity: 0;
-height: auto;
-} */ 
-
-/* 
-.dropdown-list {
-  padding: 6px 0;
-  position: relative;
-  z-index: 0;}
-
-
-.todo .dropdown li {
-  transition-duration: 0s;
-}
-.dropdown-list-item {
-  max-width: 280px;
-  padding: 6px calc(var(--app-padding) - 6px);
-  display: flex;
-  align-items: center;
-  position: relative;
-  font-size: .875rem;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.dropdown .line {
-  height: 1px;
-  margin: 5px 0;
-  padding: 0;
-  background: rgba(255 255 255 / 12%)!important;
-  cursor: default;
-} */
-
 
 @keyframes opacity{
   from{
@@ -697,8 +597,6 @@ ul {
   height: 40px;
   background-size: 40px 40px;
   background-image: url("../assets/svg/setting.svg");
-  /* margin-right: 40px; */
-  /* fill: aqua; */
   border: 0;
   outline: 0;
   opacity: .8;
@@ -709,7 +607,6 @@ ul {
 
 .form-check .form-check-input {
   float: right;
-  /* margin-left: -1.5em; */
 }
 
 .form-switch {
@@ -717,9 +614,6 @@ ul {
 }
 
 .form-check {
-  /* display: block;
-  min-height: 1.5rem;
-  padding-left: 0.5em; */
   margin-bottom: 0.125rem;
   text-align: left;
 }
@@ -741,7 +635,6 @@ ul {
 }
 
 .active-set{
-  /* display: none; */
   display: block;
   z-index: 9
 
@@ -774,8 +667,6 @@ hr{
 }
 
 h4{
-  /* margin: 39px 0 13px; */
-   /* font-size: 0.9rem; */
    font-size: 15px;
    font-weight: 700;
    text-align: left;
@@ -805,7 +696,6 @@ h4{
     border: none;
     color: rgb(255, 255, 255);
     text-decoration: wavy;
-    /* background-color: #8080803d; */
     background-color: inherit;
     text-align: center;
 
