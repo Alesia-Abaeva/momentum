@@ -13,11 +13,20 @@ const greeting = {
     night: [0,1,2,3,4,5]
 };
 
+const greetingRu = {
+    morning: 'Доброе утро',
+    afternoon: 'Добрый день',
+    evening: 'Добрый вечер',
+    night: 'Доброй ночи'
+}
+
 
 function call (){
+    const currentLanguage = JSON.parse(localStorage.getItem('language'))
+
     showTime()
-    showDate()
-    showGreeting()
+    showDate(currentLanguage)
+    showGreeting(currentLanguage)
 }
 
 call()
@@ -29,23 +38,35 @@ function showTime() {
 }
 
 
-function showDate(){
+function showDate(language = 'english'){
+    let languageTime
+    if(language === 'english'){
+        languageTime = 'en-US'
+    } else if (language === 'russian'){
+        languageTime = 'ru-RU'
+    }
+
     const options = {weekday: 'long', month: 'long', day: 'numeric'};
-    const currentDate = dateNow.toLocaleDateString('en-US', options);
+    const currentDate = dateNow.toLocaleDateString(`${languageTime}`, options);
     date.textContent = currentDate
 }
 
 
-function showGreeting(){
+function showGreeting(language = 'english'){
     const hours = dateNow.getHours()
+    let greetingText
+
       
     for(let key in greeting){
         if((greeting[key].includes(hours))){
             timeOfDay = key}
     }
-    // console.log(timeOfDay, 'in time')
 
-    const greetingText = `Good ${timeOfDay}`;
+    if(language === 'russian'){
+        greetingText = greetingRu[timeOfDay]
+    } else greetingText = `Good ${timeOfDay}`;
+
+    
     greetContain.textContent = greetingText
     return timeOfDay
 
@@ -56,7 +77,6 @@ function showGreeting(){
 
 setInterval(call,  1000);
 
-// console.log( timeOfDay, 'timeOfDay')
 
 
 

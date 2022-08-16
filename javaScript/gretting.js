@@ -1,11 +1,10 @@
 const name = document.querySelector('.name')
-// name.value = ''
 
-// localStorage
-function setLocalStorage() {
+function setLocalStorageName() {
     localStorage.setItem('name', name.value);
   }
-window.addEventListener('beforeunload', setLocalStorage)
+window.addEventListener('beforeunload', setLocalStorageName)
+
 
 function getLocalStorage() {
     if(localStorage.getItem('name')) {
