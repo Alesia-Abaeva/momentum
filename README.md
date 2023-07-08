@@ -17,7 +17,8 @@ The application has a clock, an image slider, weather widgets, an audio player, 
 
 ## Screenshot
 
-![image](https://github.com/Alesia-Abaeva/momentum/assets/101274979/5d6e140b-43f6-447d-bfdd-23ef6b480ce0)
+![image](https://github.com/Alesia-Abaeva/momentum/assets/101274979/902b6dda-e672-47e2-a767-905b454ea2b4)
+
 
 ## Tech stack
 
